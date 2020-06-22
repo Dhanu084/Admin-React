@@ -1,9 +1,21 @@
 import React from "react";
 import { connect } from "react-redux";
-
+import { fetchAllUsers } from "../actions/users";
+import { User } from "./index";
 export class App extends React.Component {
+  componentDidMount() {
+    this.props.dispatch(fetchAllUsers());
+  }
   render() {
-    return <div>Hi</div>;
+    const { users } = this.props;
+    console.log(this.props);
+    return (
+      <div>
+        {users.map((user) => (
+          <User user={user} key={user.id} />
+        ))}
+      </div>
+    );
   }
 }
 
