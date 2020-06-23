@@ -10,6 +10,9 @@ export default class Catalogueslist extends Component {
   }
   delete = (id) => {
     this.props.dispatch(deleteCategory(id));
+    this.setState({
+      name: this.props.product.name,
+    });
   };
   toggleEdit = () => {
     this.setState({
@@ -31,6 +34,7 @@ export default class Catalogueslist extends Component {
     const { edit } = this.state;
     const { product } = this.props;
     console.log(product);
+    let newArray = product.subcategory.splice(0, 5);
     return (
       <div>
         <div className="users-container">
@@ -52,7 +56,16 @@ export default class Catalogueslist extends Component {
                   onClick={() => this.delete(product.id)}
                 />
               </div>
-              <div className="subcategory">{product.subcategory}</div>
+              <div className="subcategory">
+                <div className="items">
+                  {newArray.map((category) => (
+                    <div className="bubble" key={category}>
+                      {category}
+                    </div>
+                  ))}
+                </div>
+                <div className="count">+{product.subcategory.length}</div>
+              </div>
             </div>
           )}
           {edit && (
@@ -74,7 +87,7 @@ export default class Catalogueslist extends Component {
                   save
                 </button>
                 <button className="btn failure" onClick={this.toggleEdit}>
-                  canceled
+                  cancel
                 </button>
               </div>
             </div>
