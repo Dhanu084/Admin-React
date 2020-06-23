@@ -12,7 +12,7 @@ export class App extends React.Component {
     return (
       <div>
         {users.map((user) => (
-          <User user={user} key={user.id} />
+          <User user={user} key={user.id} dispatch={this.props.dispatch} />
         ))}
       </div>
     );

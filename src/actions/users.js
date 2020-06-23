@@ -1,4 +1,4 @@
-import { FETCH_ALL_USERS } from "./actionTypes";
+import { FETCH_ALL_USERS, DELETE_USER } from "./actionTypes";
 import { APIUrls } from "../helpers/urls";
 
 export function fetchAllUsers() {
@@ -18,5 +18,12 @@ export function allUsers(users) {
   return {
     type: FETCH_ALL_USERS,
     users,
+  };
+}
+
+export function deleteuser(id) {
+  return {
+    type: DELETE_USER,
+    id,
   };
 }
