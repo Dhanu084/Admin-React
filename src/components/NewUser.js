@@ -25,6 +25,45 @@ export class NewUser extends Component {
       email: email,
     };
     this.props.dispatch(addUser(user));
+    this.setState({
+      name: "",
+      email: "",
+      id: this.state.id + 1,
+    });
+  };
+
+  getReport = () => {
+    const { users } = this.props;
+    const data = users.map((row) => ({
+      name: row.name,
+      email: row.email,
+    }));
+    console.log(data);
+    const headers = Object.keys(data[0]);
+
+    const csvData = [];
+    csvData.push(headers.join(","));
+
+    for (const row of data) {
+      const values = headers.map((header) => {
+        return `"${row[header]}"`; //to escape , in the data
+      });
+      csvData.push(values.join(","));
+    }
+    const newcsvData = csvData.join("\n");
+    console.log(newcsvData);
+    this.download(newcsvData);
+  };
+  download = (data) => {
+    const blob = new Blob([data], { type: "text/csv" });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.setAttribute("hidden", "");
+    a.setAttribute("href", url);
+    a.setAttribute("download", "download.csv");
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   };
   render() {
     return (
@@ -53,6 +92,11 @@ export class NewUser extends Component {
           <div>
             <button className="btn success" onClick={this.addNewUser}>
               Add User
+            </button>
+          </div>
+          <div>
+            <button className="btn success" onClick={this.getReport}>
+              Export Csv
             </button>
           </div>
         </div>

@@ -1,3 +1,5 @@
 import User from "./User";
 import NewUser from "./NewUser";
-export { User, NewUser };
+import Navbar from "./Navbar";
+import Catalogues from "./Catalogues";
+export { User, NewUser, Navbar, Catalogues };

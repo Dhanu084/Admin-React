@@ -120,3 +120,30 @@ code {
   border: 1px dotted black;
   padding-left: 20%;
 }
+
+.Navbar {
+  width: 99%;
+  height: 4rem;
+  margin: auto;
+  background-color: lightblue;
+}
+
+.menu {
+  width: 40%;
+  margin-left: 80%;
+  font-weight: 700;
+}
+
+.menu ul {
+  display: inline-flex;
+}
+.menu ul li {
+  list-style: none;
+  margin-right: 25%;
+  padding: 0px 10px;
+}
+.menu ul li:hover {
+  border: 0.5px solid grey;
+  border-radius: 10%;
+  cursor: pointer;
+}
