@@ -1,14 +1,25 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { fetchAllCategories } from "../actions/catalogues";
-
+import { Catalogueslist } from "./index";
 export class Catalogues extends Component {
   componentDidMount() {
     this.props.dispatch(fetchAllCategories());
   }
   render() {
-    console.log("Catlogues", this.props);
-    return <div>Catalogues</div>;
+    const { catalogues } = this.props;
+
+    return (
+      <div>
+        {catalogues.map((catalogue) => (
+          <Catalogueslist
+            product={catalogue}
+            dispatch={this.props.dispatch}
+            key={catalogue.id}
+          />
+        ))}
+      </div>
+    );
   }
 }
 function mapStateToProps(state) {

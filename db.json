@@ -46,19 +46,19 @@
         "i3",
         "Apple"
       ],
-      "id": 1,
+      "id": 2,
       "image": "https://image.flaticon.com/icons/svg/3003/3003040.svg"
     },
     {
       "name": "clothing",
       "types": ["men", "women", "kids", "summer", "winter", "party", "casuals"],
-      "id": 1,
+      "id": 3,
       "image": "https://image.flaticon.com/icons/svg/3082/3082008.svg"
     },
     {
       "name": "footwear",
       "types": ["men", "women", "kids", "party", "casuals"],
-      "id": 1,
+      "id": 4,
       "image": "https://image.flaticon.com/icons/svg/2996/2996823.svg"
     }
   ]
