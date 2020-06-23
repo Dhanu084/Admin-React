@@ -1,3 +1,3 @@
 import User from "./User";
-
-export { User };
+import NewUser from "./NewUser";
+export { User, NewUser };
