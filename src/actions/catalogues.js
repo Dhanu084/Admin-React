@@ -1,4 +1,9 @@
-import { FETCH_ALL_CATEGORIES } from "./actionTypes";
+import {
+  FETCH_ALL_CATEGORIES,
+  DELETE_CATEGORY,
+  EDIT_CATEGORY,
+  ADD_CATEGORY,
+} from "./actionTypes";
 import { APIUrls } from "../helpers/urls";
 
 export function fetchAllCategories() {
@@ -18,3 +23,19 @@ export function fetchProducts(catalogues) {
     catalogues,
   };
 }
+export function deleteCategory(id) {
+  return {
+    type: DELETE_CATEGORY,
+    id,
+  };
+}
+
+export function editCategory(id, name) {
+  return {
+    type: EDIT_CATEGORY,
+    id,
+    name,
+  };
+}
+
+export function addCategory() {}

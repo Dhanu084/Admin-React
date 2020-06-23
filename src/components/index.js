@@ -4,4 +4,13 @@ import Navbar from "./Navbar";
 import Catalogues from "./Catalogues";
 import Userslist from "./Userslist";
 import Catalogueslist from "./Catalogueslist";
-export { User, NewUser, Navbar, Catalogues, Userslist, Catalogueslist };
+import NewCategory from "./NewCategory";
+export {
+  User,
+  NewUser,
+  Navbar,
+  Catalogues,
+  Userslist,
+  Catalogueslist,
+  NewCategory,
+};
