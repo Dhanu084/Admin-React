@@ -24,16 +24,42 @@
   "catalogues": [
     {
       "name": "Mobiles",
-      "subcategory": {
-        "types": [
-          "camera",
-          "gaming",
-          "budget friendly",
-          "android",
-          "ios",
-          "battery"
-        ]
-      }
+      "subcategory": [
+        "camera",
+        "gaming",
+        "budget friendly",
+        "android",
+        "ios",
+        "battery"
+      ],
+      "id": 1,
+      "image": "https://t4.ftcdn.net/jpg/02/52/51/27/240_F_252512790_2pM4k1jUO420GCaoTjLYnkyv0Zu2vcgo.jpg"
+    },
+    {
+      "name": "laptops",
+      "types": [
+        "gaming",
+        "budget friendly",
+        "battery",
+        "i7",
+        "i5",
+        "i3",
+        "Apple"
+      ],
+      "id": 1,
+      "image": "https://image.flaticon.com/icons/svg/3003/3003040.svg"
+    },
+    {
+      "name": "clothing",
+      "types": ["men", "women", "kids", "summer", "winter", "party", "casuals"],
+      "id": 1,
+      "image": "https://image.flaticon.com/icons/svg/3082/3082008.svg"
+    },
+    {
+      "name": "footwear",
+      "types": ["men", "women", "kids", "party", "casuals"],
+      "id": 1,
+      "image": "https://image.flaticon.com/icons/svg/2996/2996823.svg"
     }
   ]
 }
