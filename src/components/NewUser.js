@@ -26,8 +26,6 @@ export class NewUser extends Component {
     };
     this.props.dispatch(addUser(user));
     this.setState({
-      name: "",
-      email: "",
       id: this.state.id + 1,
     });
   };

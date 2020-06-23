@@ -7,10 +7,13 @@ export default class Navbar extends Component {
       <div className="Navbar">
         <div className="menu">
           <ul>
-            <Link to="/catalogues">
-              <li>Catalogues</li>
-            </Link>
-            <li>Users</li>
+            <li>
+              <Link to="/catalogues">Catalogues</Link>
+            </li>
+
+            <li>
+              <Link to="/">Users</Link>
+            </li>
           </ul>
         </div>
       </div>

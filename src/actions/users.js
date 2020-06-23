@@ -4,6 +4,8 @@ import {
   SAVE_USER,
   ADD_USER,
 } from "./actionTypes";
+import { data } from "../data/users";
+
 import { APIUrls } from "../helpers/urls";
 
 export function fetchAllUsers() {
