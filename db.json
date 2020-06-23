@@ -20,5 +20,20 @@
       "email": "Todoriko@gmail.com",
       "id": 4
     }
+  ],
+  "catalogues": [
+    {
+      "name": "Mobiles",
+      "subcategory": {
+        "types": [
+          "camera",
+          "gaming",
+          "budget friendly",
+          "android",
+          "ios",
+          "battery"
+        ]
+      }
+    }
   ]
 }
